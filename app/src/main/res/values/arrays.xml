@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_items">
+        <item>FCFS</item>
+        <item>SJF</item>
+        <item>HRRN</item>
+        <item>PRR</item>
+        <item>MFQ</item>
+        <item>MFQB</item>
+    </string-array>
+</resources>

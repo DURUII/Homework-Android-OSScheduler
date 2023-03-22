@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.chart.AlgorithmFragment">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/timeline_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/icon_clock" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/overall_statistics"
+                android:textColor="@color/md_theme_light_primaryContainer"
+                android:textStyle="bold" />
+
+            <org.eazegraph.lib.charts.PieChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/history_piechart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                app:egLegendTextSize="18sp"
+                app:egUsePieRotation="true"
+                app:egValueTextSize="36sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/one_shot_analysis"
+                android:textColor="@color/md_theme_light_primaryContainer"
+                android:textStyle="bold" />
+
+            <org.eazegraph.lib.charts.ValueLineChart
+                android:id="@+id/one_shot_cubiclinechart"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                app:egCurveSmoothness="0.4"
+                app:egIndicatorLineColor="#FE6DA8"
+                app:egIndicatorTextColor="#FE6DA8"
+                app:egLegendHeight="40dp"
+                app:egShowStandardValue="true"
+                app:egUseCubic="true"
+                app:egUseOverlapFill="true" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+</layout>

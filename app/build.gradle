@@ -49,4 +49,14 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
     implementation "androidx.multidex:multidex:2.0.1"
+    implementation "androidx.fragment:fragment:1.5.5"
+
+    implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.vipulasri:timelineview:1.1.5'
+
+    implementation "androidx.navigation:navigation-fragment:2.5.3"
+    implementation "androidx.navigation:navigation-ui:2.5.3"
+
+    implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-andx'
 }

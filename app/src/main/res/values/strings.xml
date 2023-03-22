@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">toy-scheduler-android</string>
+    <string name="app_name">Scheduler</string>
+    <string name="algorithm">Algorithm</string>
+    <string name="task">Task</string>
+    <string name="index">Index</string>
+    <string name="intro">CPU是计算机系统中十分重要的资源，处理机调度是操作系统的核心内容之一。进程调度和作业调度作为处理机调度的重要组成部分，其调度算法性能的优劣将直接影响操作系统的性能。通过对进程调度和作业调度算法的模拟设计，在掌握各种调度算法的同时，进一步加深理解处理机管理技术的原理及特点。</string>
+    <string name="author">WUST - DURUII</string>
+    <string name="todo">todo: timeline view</string>
+    <string name="universal_attribute">Universal Attribute</string>
+    <string name="not_set">Not Set</string>
+    <string name="submitted">Submitted</string>
+    <string name="estimated">Estimated</string>
+    <string name="algorithm_attribute">Algorithm Attribute</string>
+    <string name="priority">Priority</string>
+    <string name="time_slice">Time Slice</string>
+    <string name="overall_statistics">Overall Statistics</string>
+    <string name="one_shot_analysis">One-Shot Analysis</string>
+    <string name="add">Add</string>
+    <string name="start">Start</string>
 </resources>

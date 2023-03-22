@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--https://github.com/material-components/material-components-android/blob/master/docs/components/BottomNavigation.md-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_task"
+        android:enabled="true"
+        android:icon="@drawable/icon_submit"
+        android:title="@string/task" />
+    <item
+        android:id="@+id/item_index"
+        android:enabled="true"
+        android:icon="@drawable/icon_index"
+        android:title="@string/index" />
+    <item
+        android:id="@+id/item_algorithm"
+        android:enabled="true"
+        android:icon="@drawable/icon_algorithm"
+        android:title="@string/algorithm" />
+</menu>
