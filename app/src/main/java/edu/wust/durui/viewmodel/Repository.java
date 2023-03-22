@@ -55,7 +55,6 @@ public class Repository extends ViewModel {
         tasks.getValue().add(new Task(
                 Clock.parsePatternIntoMinutes("9:30"),
                 12));
-        tasks.setValue(tasks.getValue());
     }
 
     // TODO Add a task & Configure Round-Ribbon
@@ -63,6 +62,7 @@ public class Repository extends ViewModel {
     private Integer jobSubmitTime = null;
     private Integer priority = null;
     Integer quantum = null;
+    Integer factor = null;
 
     public void setEstimatedRequireTime(int hour, int minute) {
         this.estimatedRequireTime = hour * 60 + minute;
@@ -84,6 +84,12 @@ public class Repository extends ViewModel {
         }
     }
 
+    public void setFactor(Editable factor) {
+        if (factor != null && factor.length() != 0) {
+            this.factor = Integer.parseInt(factor + "");
+        }
+    }
+
     public String getEstimatedRequireTimeText() {
         return String.format(Locale.CHINA, "%02d:%02d", this.estimatedRequireTime / 60, this.estimatedRequireTime % 60);
     }
@@ -99,8 +105,9 @@ public class Repository extends ViewModel {
         return true;
     }
 
-    public boolean resetQuantum() {
+    public boolean resetQuantumAndFactor() {
         quantum = null;
+        factor = null;
         return true;
     }
 
@@ -146,8 +153,8 @@ public class Repository extends ViewModel {
         machines.add(new SJFBuilder().build());
         machines.add(new HRRNBuilder().build());
         machines.add(new PRRBuilder().build().setQuantum(quantum));
-        machines.add(new MFQBuilder().build());
-        machines.add(new MFQBBuilder().build());
+        machines.add(new MFQBuilder().build().setFactor(factor));
+        machines.add(new MFQBBuilder().build().setFactor(factor));
         // machines.add(new SJFMQFBBuilder().build());
 
         // algorithm analysis(single)
@@ -183,7 +190,7 @@ public class Repository extends ViewModel {
         histories.setValue(pies);
 
         counter.setValue(counter.getValue() + 1);
-        resetQuantum();
+        resetQuantumAndFactor();
     }
 
     public void setTag(Editable tag) {

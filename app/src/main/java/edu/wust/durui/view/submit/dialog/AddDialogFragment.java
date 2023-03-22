@@ -27,7 +27,7 @@ public class AddDialogFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         binding = DataBindingUtil.inflate(inflater, R.layout.dialog_fragment_add, null, false);
-        // FIXME viewModelStoreOwner cannot be this!
+        // FIXME viewModelStoreOwner
         viewModel = new ViewModelProvider(this.getActivity()).get(Repository.class);
 
         binding.estimatedTimeBtn.setOnClickListener(v -> {

@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:padding="8dp"
+                android:scrollbars="vertical"
                 android:text="@string/todo" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>

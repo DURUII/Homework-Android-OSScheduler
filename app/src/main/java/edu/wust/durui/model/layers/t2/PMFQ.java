@@ -14,6 +14,7 @@ public class PMFQ extends Scheduler {
     private boolean leisure = true;
     private int busyIndex = 0;
     private int quantum = 1;
+    private int factor = 1;
     private int dynamicTimeSlice = quantum;
 
     public PMFQ() {
@@ -23,6 +24,10 @@ public class PMFQ extends Scheduler {
         queues.add(mid);
         Deque<Task> btm = new ArrayDeque<>();
         queues.add(btm);
+    }
+
+    public void setFactor(int factor) {
+        this.factor = factor;
     }
 
     @Override
@@ -59,9 +64,9 @@ public class PMFQ extends Scheduler {
             // somebody ready
             if (nextBusyIndex() != -1) {
                 busyIndex = nextBusyIndex();
-                quantum = (int) Math.pow(2, busyIndex);
+                // FIXME factor*2^busyIndex
+                quantum = factor * (int) Math.pow(2, busyIndex);
                 dynamicTimeSlice = quantum;
-
                 Deque<Task> queue = queues.get(busyIndex);
                 queue.peek().toggleRunning(currentTime);
                 leisure = false;

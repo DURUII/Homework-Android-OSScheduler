@@ -5,6 +5,8 @@ import java.util.List;
 import edu.wust.durui.model.cornerstone.Clock;
 import edu.wust.durui.model.cornerstone.Scheduler;
 import edu.wust.durui.model.cornerstone.Task;
+import edu.wust.durui.model.layers.t2.PMFQ;
+import edu.wust.durui.model.layers.t2.PMFQB;
 import edu.wust.durui.model.layers.t2.PPRR;
 import edu.wust.durui.model.layers.t3.T3;
 
@@ -42,6 +44,15 @@ public class Machine {
     public Machine setQuantum(int quantum) {
         if (processScheduler.getClass().equals(PPRR.class)) {
             ((PPRR) processScheduler).setQuantum(quantum);
+        }
+        return this;
+    }
+
+    public Machine setFactor(int factor) {
+        if (processScheduler.getClass().equals(PMFQ.class)) {
+            ((PMFQ) processScheduler).setFactor(factor);
+        } else if (processScheduler.getClass().equals(PMFQB.class)) {
+            ((PMFQB) processScheduler).setFactor(factor);
         }
         return this;
     }

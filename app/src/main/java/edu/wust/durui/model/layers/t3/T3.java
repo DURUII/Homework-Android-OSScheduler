@@ -81,6 +81,9 @@ public class T3 extends Scheduler {
     }
 
     public String getFinalSnapShot() {
+        float sum = 0.0f;
+        int size = queue.size();
+
         PriorityQueue<Task> swap = new PriorityQueue<>(new Comparator<Task>() {
             @Override
             public int compare(Task o1, Task o2) {
@@ -92,26 +95,27 @@ public class T3 extends Scheduler {
         StringBuilder sb = new StringBuilder();
         while (!queue.isEmpty()) {
             Task t = queue.poll();
+            sum += t.getRoundTime();
 
-            sb.append("ID:");
+            sb.append("ID: ");
             sb.append(t.getId() + 1);
             sb.append("\n");
-            sb.append("priority:");
+            sb.append("priority: ");
             sb.append(t.getPriority());
             sb.append("\n");
-            sb.append("submit:");
+            sb.append("submit: ");
             sb.append(Clock.generatePatternFromMinutes(t.getJobSubmitTime()));
             sb.append("\n");
-            sb.append("arrive:");
+            sb.append("arrive: ");
             sb.append(Clock.generatePatternFromMinutes(t.getProcessArriveTime()));
             sb.append("\n");
-            sb.append("start:");
+            sb.append("start: ");
             sb.append(Clock.generatePatternFromMinutes(t.getProcessStartTime()));
             sb.append("\n");
-            sb.append("complete:");
+            sb.append("complete: ");
             sb.append(Clock.generatePatternFromMinutes(t.getProcessCompleteTime()));
             sb.append("\n");
-            sb.append("round:");
+            sb.append("round: ");
             sb.append(Clock.generatePatternFromMinutes(t.getRoundTime()));
             sb.append("\n");
             sb.append("\n");
@@ -119,6 +123,14 @@ public class T3 extends Scheduler {
         }
 
         this.queue = swap;
+
+        sb.append("Avg Round Time (h): ");
+        sb.append(sum / size / 60);
+        sb.append("\n");
+        sb.append("Avg Round Time (min): ");
+        sb.append(sum / size);
+        sb.append("\n");
+
         return sb.toString();
     }
 

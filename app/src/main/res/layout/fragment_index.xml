@@ -15,7 +15,6 @@
             android:orientation="vertical">
 
             <com.scwang.wave.MultiWaveHeader
-                android:id="@+id/waveHeader"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 app:layout_constraintEnd_toEndOf="parent"

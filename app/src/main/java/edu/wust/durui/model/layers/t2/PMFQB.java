@@ -9,17 +9,13 @@ import edu.wust.durui.model.cornerstone.Clock;
 import edu.wust.durui.model.cornerstone.Scheduler;
 import edu.wust.durui.model.cornerstone.Task;
 
-/**
- * Created with IntelliJ IDEA.
- *
- * @author DURUII
- * @date 2023/03/19/20:20
- */
+
 public class PMFQB extends Scheduler {
     private final List<Deque<Task>> queues = new ArrayList<>();
     private boolean leisure = true;
     private int busyIndex = 0;
     private int quantum = 1;
+    private int factor = 1;
     private int dynamicTimeSlice = quantum;
 
     public PMFQB() {
@@ -29,6 +25,10 @@ public class PMFQB extends Scheduler {
         queues.add(mid);
         Deque<Task> btm = new ArrayDeque<>();
         queues.add(btm);
+    }
+
+    public void setFactor(int factor) {
+        this.factor = factor;
     }
 
     @Override
@@ -73,9 +73,9 @@ public class PMFQB extends Scheduler {
             // somebody ready
             if (nextBusyIndex() != -1) {
                 busyIndex = nextBusyIndex();
-                quantum = (int) Math.pow(2, busyIndex);
+                // FIXME factor*2^busyIndex
+                quantum = factor * (int) Math.pow(2, busyIndex);
                 dynamicTimeSlice = quantum;
-
                 Deque<Task> queue = queues.get(busyIndex);
                 queue.peek().toggleRunning(currentTime);
                 leisure = false;

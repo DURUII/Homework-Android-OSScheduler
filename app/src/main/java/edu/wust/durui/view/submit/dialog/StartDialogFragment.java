@@ -29,6 +29,7 @@ public class StartDialogFragment extends DialogFragment {
                 .setNegativeButton("Cancel", null)
                 .setPositiveButton("Start", (dialog, id) -> {
                     viewModel.setQuantum(binding.timesliceEdit.getText());
+                    viewModel.setFactor(binding.factorEdit.getText());
                     viewModel.startSchedule();
                 });
 
