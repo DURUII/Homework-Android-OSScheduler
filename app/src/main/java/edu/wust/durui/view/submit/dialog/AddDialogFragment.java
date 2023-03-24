@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.DialogFragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
 
@@ -24,7 +25,6 @@ public class AddDialogFragment extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         binding = DataBindingUtil.inflate(inflater, R.layout.dialog_fragment_add, null, false);
         // FIXME viewModelStoreOwner
@@ -48,7 +48,9 @@ public class AddDialogFragment extends DialogFragment {
             });
         });
 
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getActivity());
         builder.setView(binding.getRoot())
+                .setCancelable(false)
                 .setNegativeButton("Cancel", null)
                 .setPositiveButton("Add", (dialog, id) -> {
                     viewModel.setPriority(binding.priorityEdit.getText());

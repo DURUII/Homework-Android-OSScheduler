@@ -33,6 +33,7 @@ public class Repository extends ViewModel {
     public MutableLiveData<List<ValueLinePoint>> rounds = new MutableLiveData<>();
     public MutableLiveData<List<PieModel>> histories = new MutableLiveData<>();
     public MutableLiveData<String> snap = new MutableLiveData<>();
+    public MutableLiveData<Object[]> snapTasks = new MutableLiveData<>();
     public MutableLiveData<Integer> counter = new MutableLiveData<>();
 
     // TODO init
@@ -41,6 +42,7 @@ public class Repository extends ViewModel {
         rounds.setValue(new ArrayList<>());
         histories.setValue(new ArrayList<>());
         snap.setValue("");
+        snapTasks.setValue(new Object[]{});
         counter.setValue(0);
 
         tasks.getValue().add(new Task(
@@ -145,6 +147,7 @@ public class Repository extends ViewModel {
     // TODO algorithm analysis & snap shot
     private final HashMap<String, Float> accumulatedRoundTime = new HashMap<>();
     private final HashMap<String, String> snapShots = new HashMap<>();
+    private final HashMap<String, Object[]> snapShotsTasks = new HashMap<>();
     private String tag = "";
 
     public void startSchedule() {
@@ -166,6 +169,7 @@ public class Repository extends ViewModel {
             points.add(new ValueLinePoint(machine.getTAG(), machine.getAverageRoundTime()));
 
             snapShots.put(machine.getTAG(), machine.getFinalSnapShot());
+            snapShotsTasks.put(machine.getTAG(), machine.getFinalSnapShotTasks());
 
             Float history = accumulatedRoundTime.get(machine.getTAG());
             if (history != null) {
@@ -197,6 +201,9 @@ public class Repository extends ViewModel {
         if (tag != null && tag.length() != 0) {
             this.tag = tag + "";
             snap.setValue(snapShots.getOrDefault(this.tag, "https://github.com/DURUII"));
+            snapTasks.setValue(snapShotsTasks.getOrDefault(this.tag, new Object[]{}));
+        } else {
+            snap.setValue("https://github.com/DURUII");
         }
     }
 

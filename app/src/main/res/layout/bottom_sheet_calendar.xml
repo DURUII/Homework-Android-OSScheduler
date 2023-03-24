@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/Widget.Material3.BottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.roundtableapps.timelinedayviewlibrary.TimeLineLayout
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#009688"
+                android:clipToPadding="false"
+                android:paddingBottom="50dp"
+                app:dividerColor="@color/md_theme_light_secondaryContainer"
+                app:dividerTextColor="#FFF"
+                app:eachRowHeight="25dp"
+                app:minimumPercentage="0.25"
+                app:numberOfRows="24" />
+
+        </ScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

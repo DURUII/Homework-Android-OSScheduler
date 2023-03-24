@@ -40,6 +40,10 @@ public class Machine {
         return ((T3) landfilImitator).getFinalSnapShot();
     }
 
+    public Object[] getFinalSnapShotTasks() {
+        return ((T3) landfilImitator).getFinalSnapShotTasks();
+    }
+
     // setters
     public Machine setQuantum(int quantum) {
         if (processScheduler.getClass().equals(PPRR.class)) {

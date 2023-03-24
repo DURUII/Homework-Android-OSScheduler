@@ -1,5 +1,6 @@
 package edu.wust.durui.model.layers.t3;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -78,6 +79,10 @@ public class T3 extends Scheduler {
 
         this.queue = swap;
         return sum / size;
+    }
+
+    public Object[] getFinalSnapShotTasks(){
+        return queue.toArray();
     }
 
     public String getFinalSnapShot() {

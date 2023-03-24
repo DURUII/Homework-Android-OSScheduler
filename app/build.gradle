@@ -59,4 +59,5 @@ dependencies {
     implementation "androidx.navigation:navigation-ui:2.5.3"
 
     implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-andx'
+    implementation 'com.github.r3za13:android-timeline-schedule-view:0.9'
 }

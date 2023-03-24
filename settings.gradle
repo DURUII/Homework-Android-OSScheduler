@@ -3,6 +3,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+
         jcenter()
     }
 }
@@ -11,7 +12,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "toy-scheduler-android"

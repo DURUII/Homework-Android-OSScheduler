@@ -1,4 +1,4 @@
-package edu.wust.durui.view.chart.timeline;
+package edu.wust.durui.view.chart.sheet;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
