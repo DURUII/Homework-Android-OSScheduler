@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="295px" preserveAspectRatio="none" style="width:664px;height:295px;background:#FFFFFF;" version="1.1" viewBox="0 0 664 295" width="664px" zoomAndPan="magnify"><defs/><g><!--MD5=[c053a105bcf153d42bf1c80326010135]
+class Clock--><g id="elem_Clock"><rect codeLine="6" fill="#F1F1F1" height="48" id="Clock" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="70" x="203" y="119.5"/><ellipse cx="218" cy="135.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M220.9731,141.1431 Q220.3921,141.4419 219.7529,141.5913 Q219.1138,141.7407 218.4082,141.7407 Q215.9014,141.7407 214.5815,140.0889 Q213.2617,138.437 213.2617,135.3159 Q213.2617,132.1865 214.5815,130.5347 Q215.9014,128.8828 218.4082,128.8828 Q219.1138,128.8828 219.7612,129.0322 Q220.4087,129.1816 220.9731,129.4805 L220.9731,132.2031 Q220.3423,131.6221 219.7488,131.3523 Q219.1553,131.0825 218.5244,131.0825 Q217.1797,131.0825 216.4949,132.1492 Q215.8101,133.2158 215.8101,135.3159 Q215.8101,137.4077 216.4949,138.4744 Q217.1797,139.541 218.5244,139.541 Q219.1553,139.541 219.7488,139.2712 Q220.3423,139.0015 220.9731,138.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="232" y="140.791">Clock</text><line style="stroke:#181818;stroke-width:0.5;" x1="204" x2="272" y1="151.5" y2="151.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="204" x2="272" y1="159.5" y2="159.5"/></g><!--MD5=[8ea3969a0a32b3f7fb973a01e6c3f062]
+class JFCFS--><g id="elem_JFCFS"><rect codeLine="7" fill="#F1F1F1" height="48" id="JFCFS" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="70" x="116" y="7"/><ellipse cx="131" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M133.9731,28.6431 Q133.3921,28.9419 132.7529,29.0913 Q132.1138,29.2407 131.4082,29.2407 Q128.9014,29.2407 127.5815,27.5889 Q126.2617,25.937 126.2617,22.8159 Q126.2617,19.6865 127.5815,18.0347 Q128.9014,16.3828 131.4082,16.3828 Q132.1138,16.3828 132.7612,16.5322 Q133.4087,16.6816 133.9731,16.9805 L133.9731,19.7031 Q133.3423,19.1221 132.7488,18.8523 Q132.1553,18.5825 131.5244,18.5825 Q130.1797,18.5825 129.4949,19.6492 Q128.8101,20.7158 128.8101,22.8159 Q128.8101,24.9077 129.4949,25.9744 Q130.1797,27.041 131.5244,27.041 Q132.1553,27.041 132.7488,26.7712 Q133.3423,26.5015 133.9731,25.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="145" y="28.291">JFCFS</text><line style="stroke:#181818;stroke-width:0.5;" x1="117" x2="185" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="117" x2="185" y1="47" y2="47"/></g><!--MD5=[fa28d7f800c6d972e4f153b468f30eff]
+class JHRRN--><g id="elem_JHRRN"><rect codeLine="8" fill="#F1F1F1" height="48" id="JHRRN" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="221" y="7"/><ellipse cx="236" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M238.9731,28.6431 Q238.3921,28.9419 237.7529,29.0913 Q237.1138,29.2407 236.4082,29.2407 Q233.9014,29.2407 232.5815,27.5889 Q231.2617,25.937 231.2617,22.8159 Q231.2617,19.6865 232.5815,18.0347 Q233.9014,16.3828 236.4082,16.3828 Q237.1138,16.3828 237.7612,16.5322 Q238.4087,16.6816 238.9731,16.9805 L238.9731,19.7031 Q238.3423,19.1221 237.7488,18.8523 Q237.1553,18.5825 236.5244,18.5825 Q235.1797,18.5825 234.4949,19.6492 Q233.8101,20.7158 233.8101,22.8159 Q233.8101,24.9077 234.4949,25.9744 Q235.1797,27.041 236.5244,27.041 Q237.1553,27.041 237.7488,26.7712 Q238.3423,26.5015 238.9731,25.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="250" y="28.291">JHRRN</text><line style="stroke:#181818;stroke-width:0.5;" x1="222" x2="294" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="222" x2="294" y1="47" y2="47"/></g><!--MD5=[a5842c5bfbb9f793506c66e509e5932d]
+class JSJF--><g id="elem_JSJF"><rect codeLine="9" fill="#F1F1F1" height="48" id="JSJF" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="56" x="330" y="7"/><ellipse cx="345" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M347.9731,28.6431 Q347.3921,28.9419 346.7529,29.0913 Q346.1138,29.2407 345.4082,29.2407 Q342.9014,29.2407 341.5815,27.5889 Q340.2617,25.937 340.2617,22.8159 Q340.2617,19.6865 341.5815,18.0347 Q342.9014,16.3828 345.4082,16.3828 Q346.1138,16.3828 346.7612,16.5322 Q347.4087,16.6816 347.9731,16.9805 L347.9731,19.7031 Q347.3423,19.1221 346.7488,18.8523 Q346.1553,18.5825 345.5244,18.5825 Q344.1797,18.5825 343.4949,19.6492 Q342.8101,20.7158 342.8101,22.8159 Q342.8101,24.9077 343.4949,25.9744 Q344.1797,27.041 345.5244,27.041 Q346.1553,27.041 346.7488,26.7712 Q347.3423,26.5015 347.9731,25.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24" x="359" y="28.291">JSJF</text><line style="stroke:#181818;stroke-width:0.5;" x1="331" x2="385" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="331" x2="385" y1="47" y2="47"/></g><!--MD5=[c0bd9f44073f1a51428d87d6a9cf071b]
+class Observable--><g id="elem_Observable"><rect codeLine="10" fill="#F1F1F1" height="56.6211" id="Observable" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="183.5" y="232"/><ellipse cx="198.5" cy="252.3105" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M194.4277,248.0757 L194.4277,245.9175 L201.8071,245.9175 L201.8071,248.0757 L199.3418,248.0757 L199.3418,256.1523 L201.8071,256.1523 L201.8071,258.3105 L194.4277,258.3105 L194.4277,256.1523 L196.8931,256.1523 L196.8931,248.0757 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="62" x="220" y="248.6016">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77" x="212.5" y="264.668">Observable</text><line style="stroke:#181818;stroke-width:0.5;" x1="184.5" x2="291.5" y1="272.6211" y2="272.6211"/><line style="stroke:#181818;stroke-width:0.5;" x1="184.5" x2="291.5" y1="280.6211" y2="280.6211"/></g><!--MD5=[d40932010816485ec57b44b6eea2392a]
+class Observer--><g id="elem_Observer"><rect codeLine="11" fill="#F1F1F1" height="56.6211" id="Observer" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="94" x="328" y="232"/><ellipse cx="343" cy="252.3105" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M338.9277,248.0757 L338.9277,245.9175 L346.3071,245.9175 L346.3071,248.0757 L343.8418,248.0757 L343.8418,256.1523 L346.3071,256.1523 L346.3071,258.3105 L338.9277,258.3105 L338.9277,256.1523 L341.3931,256.1523 L341.3931,248.0757 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="62" x="357" y="248.6016">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="62" x="357" y="264.668">Observer</text><line style="stroke:#181818;stroke-width:0.5;" x1="329" x2="421" y1="272.6211" y2="272.6211"/><line style="stroke:#181818;stroke-width:0.5;" x1="329" x2="421" y1="280.6211" y2="280.6211"/></g><!--MD5=[3ec832ca5f1a3d55030b24944a0ec853]
+class PFCFS--><g id="elem_PFCFS"><rect codeLine="12" fill="#F1F1F1" height="48" id="PFCFS" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="7" y="7"/><ellipse cx="22" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.9731,28.6431 Q24.3921,28.9419 23.7529,29.0913 Q23.1138,29.2407 22.4082,29.2407 Q19.9014,29.2407 18.5815,27.5889 Q17.2617,25.937 17.2617,22.8159 Q17.2617,19.6865 18.5815,18.0347 Q19.9014,16.3828 22.4082,16.3828 Q23.1138,16.3828 23.7612,16.5322 Q24.4087,16.6816 24.9731,16.9805 L24.9731,19.7031 Q24.3423,19.1221 23.7488,18.8523 Q23.1553,18.5825 22.5244,18.5825 Q21.1797,18.5825 20.4949,19.6492 Q19.8101,20.7158 19.8101,22.8159 Q19.8101,24.9077 20.4949,25.9744 Q21.1797,27.041 22.5244,27.041 Q23.1553,27.041 23.7488,26.7712 Q24.3423,26.5015 24.9731,25.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="36" y="28.291">PFCFS</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="80" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="80" y1="47" y2="47"/></g><!--MD5=[811e20c090b001930aea36cb51af781a]
+class PPRR--><g id="elem_PPRR"><rect codeLine="13" fill="#F1F1F1" height="48" id="PPRR" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="66" x="591" y="7"/><ellipse cx="606" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M608.9731,28.6431 Q608.3921,28.9419 607.7529,29.0913 Q607.1138,29.2407 606.4082,29.2407 Q603.9014,29.2407 602.5815,27.5889 Q601.2617,25.937 601.2617,22.8159 Q601.2617,19.6865 602.5815,18.0347 Q603.9014,16.3828 606.4082,16.3828 Q607.1138,16.3828 607.7612,16.5322 Q608.4087,16.6816 608.9731,16.9805 L608.9731,19.7031 Q608.3423,19.1221 607.7488,18.8523 Q607.1553,18.5825 606.5244,18.5825 Q605.1797,18.5825 604.4949,19.6492 Q603.8101,20.7158 603.8101,22.8159 Q603.8101,24.9077 604.4949,25.9744 Q605.1797,27.041 606.5244,27.041 Q607.1553,27.041 607.7488,26.7712 Q608.3423,26.5015 608.9731,25.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="620" y="28.291">PPRR</text><line style="stroke:#181818;stroke-width:0.5;" x1="592" x2="656" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="592" x2="656" y1="47" y2="47"/></g><!--MD5=[8523c9eb2e1b5151dfc9c2a797373c5f]
+class Scheduler--><g id="elem_Scheduler"><rect codeLine="14" fill="#F1F1F1" height="56.6211" id="Scheduler" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="100" x="308" y="115"/><ellipse cx="323" cy="135.3105" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M318.9277,131.0757 L318.9277,128.9175 L326.3071,128.9175 L326.3071,131.0757 L323.8418,131.0757 L323.8418,139.1523 L326.3071,139.1523 L326.3071,141.3105 L318.9277,141.3105 L318.9277,139.1523 L321.3931,139.1523 L321.3931,131.0757 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="62" x="340" y="131.6016">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="68" x="337" y="147.668">Scheduler</text><line style="stroke:#181818;stroke-width:0.5;" x1="309" x2="407" y1="155.6211" y2="155.6211"/><line style="stroke:#181818;stroke-width:0.5;" x1="309" x2="407" y1="163.6211" y2="163.6211"/></g><!--MD5=[60d6b92408f98aed8df94d5c6e04aa63]
+class State--><g id="elem_State"><rect codeLine="15" fill="#F1F1F1" height="56.6211" id="State" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="490" y="232"/><ellipse cx="505" cy="252.3105" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M509.1143,258.3105 L501.3945,258.3105 L501.3945,245.9175 L509.1143,245.9175 L509.1143,248.0757 L503.8433,248.0757 L503.8433,250.7485 L508.6162,250.7485 L508.6162,252.9067 L503.8433,252.9067 L503.8433,256.1523 L509.1143,256.1523 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="84" x="517" y="248.6016">«enumeration»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="542" y="264.668">State</text><line style="stroke:#181818;stroke-width:0.5;" x1="491" x2="601" y1="272.6211" y2="272.6211"/><line style="stroke:#181818;stroke-width:0.5;" x1="491" x2="601" y1="280.6211" y2="280.6211"/></g><!--MD5=[d3b2605cd94d2a158a463aafb824dc75]
+class T0--><g id="elem_T0"><rect codeLine="16" fill="#F1F1F1" height="48" id="T0" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="421" y="7"/><ellipse cx="436" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M438.9731,28.6431 Q438.3921,28.9419 437.7529,29.0913 Q437.1138,29.2407 436.4082,29.2407 Q433.9014,29.2407 432.5815,27.5889 Q431.2617,25.937 431.2617,22.8159 Q431.2617,19.6865 432.5815,18.0347 Q433.9014,16.3828 436.4082,16.3828 Q437.1138,16.3828 437.7612,16.5322 Q438.4087,16.6816 438.9731,16.9805 L438.9731,19.7031 Q438.3423,19.1221 437.7488,18.8523 Q437.1553,18.5825 436.5244,18.5825 Q435.1797,18.5825 434.4949,19.6492 Q433.8101,20.7158 433.8101,22.8159 Q433.8101,24.9077 434.4949,25.9744 Q435.1797,27.041 436.5244,27.041 Q437.1553,27.041 437.7488,26.7712 Q438.3423,26.5015 438.9731,25.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="450" y="28.291">T0</text><line style="stroke:#181818;stroke-width:0.5;" x1="422" x2="470" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="422" x2="470" y1="47" y2="47"/></g><!--MD5=[f8c0e42aec32801a690f4bc6be9dd72d]
+class T3--><g id="elem_T3"><rect codeLine="17" fill="#F1F1F1" height="48" id="T3" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="506" y="7"/><ellipse cx="521" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M523.9731,28.6431 Q523.3921,28.9419 522.7529,29.0913 Q522.1138,29.2407 521.4082,29.2407 Q518.9014,29.2407 517.5815,27.5889 Q516.2617,25.937 516.2617,22.8159 Q516.2617,19.6865 517.5815,18.0347 Q518.9014,16.3828 521.4082,16.3828 Q522.1138,16.3828 522.7612,16.5322 Q523.4087,16.6816 523.9731,16.9805 L523.9731,19.7031 Q523.3423,19.1221 522.7488,18.8523 Q522.1553,18.5825 521.5244,18.5825 Q520.1797,18.5825 519.4949,19.6492 Q518.8101,20.7158 518.8101,22.8159 Q518.8101,24.9077 519.4949,25.9744 Q520.1797,27.041 521.5244,27.041 Q522.1553,27.041 522.7488,26.7712 Q523.3423,26.5015 523.9731,25.9204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="535" y="28.291">T3</text><line style="stroke:#181818;stroke-width:0.5;" x1="507" x2="555" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="507" x2="555" y1="47" y2="47"/></g><!--MD5=[b34797a66dc35cbf1d65f7e3ca75530e]
+class Task--><g id="elem_Task"><rect codeLine="18" fill="#F1F1F1" height="48" id="Task" rx="3.5" ry="3.5" style="stroke:#181818;stroke-width:0.5;" width="64" x="514" y="119.5"/><ellipse cx="529" cy="135.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M531.9731,141.1431 Q531.3921,141.4419 530.7529,141.5913 Q530.1138,141.7407 529.4082,141.7407 Q526.9014,141.7407 525.5815,140.0889 Q524.2617,138.437 524.2617,135.3159 Q524.2617,132.1865 525.5815,130.5347 Q526.9014,128.8828 529.4082,128.8828 Q530.1138,128.8828 530.7612,129.0322 Q531.4087,129.1816 531.9731,129.4805 L531.9731,132.2031 Q531.3423,131.6221 530.7488,131.3523 Q530.1553,131.0825 529.5244,131.0825 Q528.1797,131.0825 527.4949,132.1492 Q526.8101,133.2158 526.8101,135.3159 Q526.8101,137.4077 527.4949,138.4744 Q528.1797,139.541 529.5244,139.541 Q530.1553,139.541 530.7488,139.2712 Q531.3423,139.0015 531.9731,138.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="543" y="140.791">Task</text><line style="stroke:#181818;stroke-width:0.5;" x1="515" x2="577" y1="151.5" y2="151.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="515" x2="577" y1="159.5" y2="159.5"/></g><!--MD5=[f551eaae52a0f01c5d3fbcd4938f46bb]
+link Clock to Observable--><g id="link_Clock_Observable"><path codeLine="20" d="M238,167.77 C238,180.42 238,196.55 238,211.75 " fill="none" id="Clock-to-Observable" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="245,211.8,238,231.8,231,211.8,245,211.8" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[5034c3b7feed78399819cee5b2b6557a]
+link Clock to Observer--><g id="link_Clock_Observer"><path codeLine="21" d="M274.9116,175.4846 C274.9116,175.4846 314.01,208.3 332.03,223.43 " fill="none" id="Clock-Observer" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="342.01,231.8,337.6878,222.9502,338.1802,228.5856,332.5448,229.0779,342.01,231.8" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="338.1802" x2="332.045" y1="228.5856" y2="223.445"/><polygon fill="#595959" points="265.72,167.77,267.7443,174.6912,274.9116,175.4846,272.8873,168.5634,265.72,167.77" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="263.5018" y="188.1201">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="295.4823" y="205.8634">observers</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6" x="322.9823" y="221.1739">*</text></g><!--MD5=[491d41f205e0f7483eb0226fb5c4f624]
+link JFCFS to Scheduler--><g id="link_JFCFS_Scheduler"><path codeLine="22" d="M183.79,55.16 C212.36,71.76 254.23,94.27 289.89,112.28 " fill="none" id="JFCFS-to-Scheduler" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="293.08,106.06,307.87,121.24,286.84,118.59,293.08,106.06" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[491d41f205e0f7483eb0226fb5c4f624]
+link JFCFS to Scheduler--><g id="link_JFCFS_Scheduler"><path codeLine="23" d="M196.9265,50.9246 C196.9265,50.9246 273.5,89.76 306.9,108.51 " fill="none" id="JFCFS-Scheduler" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="318.28,114.97,312.4277,107.0485,313.9317,112.5017,308.4785,114.0058,318.28,114.97" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="313.9317" x2="306.975" y1="112.5017" y2="108.555"/><polygon fill="#595959" points="186.09,45.77,189.7901,51.9595,196.9265,50.9246,193.2265,44.7351,186.09,45.77" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="194.1523" y="44.8698">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="265.6827" y="88.9251">superior</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="287.6827" y="104.2356">1</text></g><!--MD5=[5dc1c3364625aab252b5822807370e34]
+link JHRRN to Scheduler--><g id="link_JHRRN_Scheduler"><path codeLine="24" d="M268.36,55.16 C278.15,68.17 292.6,84.8 307.15,100.06 " fill="none" id="JHRRN-to-Scheduler" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="312.51,95.52,321.58,114.67,302.55,105.36,312.51,95.52" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[5dc1c3364625aab252b5822807370e34]
+link JHRRN to Scheduler--><g id="link_JHRRN_Scheduler"><path codeLine="25" d="M298.8126,63.5057 C298.8126,63.5057 325.51,91.32 336.28,104.22 " fill="none" id="JHRRN-Scheduler" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="344.71,114.67,342.1736,105.1533,341.5711,110.778,335.9465,110.1755,344.71,114.67" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="341.5711" x2="336.55" y1="110.778" y2="104.555"/><polygon fill="#595959" points="290.19,55.16,291.7194,62.2071,298.8126,63.5057,297.2832,56.4587,290.19,55.16" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="289.0613" y="75.4833">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="347.1328" y="88.9786">superior</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="369.1328" y="104.2891">1</text></g><!--MD5=[daa7ccf07541cbe438b06b76c0841a7e]
+link JSJF to Scheduler--><g id="link_JSJF_Scheduler"><path codeLine="26" d="M347.39,55.16 C345.67,66.54 344.98,80.7 345.34,94.28 " fill="none" id="JSJF-to-Scheduler" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="352.36,94.23,346.76,114.67,338.39,95.21,352.36,94.23" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[daa7ccf07541cbe438b06b76c0841a7e]
+link JSJF to Scheduler--><g id="link_JSJF_Scheduler"><path codeLine="27" d="M370.6275,67.0783 C370.6275,67.0783 371.73,90.55 371.1,101.44 " fill="none" id="JSJF-Scheduler" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="369.9,114.67,374.695,106.0672,370.3507,109.6904,366.7275,105.3461,369.9,114.67" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="370.3507" x2="371.07" y1="109.6904" y2="101.72"/><polygon fill="#595959" points="369.23,55.16,365.956,61.585,370.6275,67.0783,373.9015,60.6533,369.23,55.16" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="362.9923" y="75.4833">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="315.2122" y="88.9786">superior</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="337.2122" y="104.2891">1</text></g><!--MD5=[c495b6e404fd04a807fb9f2cd94a7bc3]
+link PFCFS to Observable--><g id="link_PFCFS_Observable"><path codeLine="28" d="M71.4491,64.2071 C71.4491,64.2071 168.66,178.18 205.9,221.85 " fill="none" id="PFCFS-Observable" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="214.37,231.8,211.5668,222.3585,211.1228,227.9979,205.4834,227.554,214.37,231.8" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="211.1228" x2="205.94" y1="227.9979" y2="221.905"/><polygon fill="#595959" points="63.67,55.07,64.5138,62.2316,71.4491,64.2071,70.6052,57.0455,63.67,55.07" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="59.4896" y="75.3714">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="169.0757" y="205.8634">target</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="183.5757" y="221.1739">1</text></g><!--MD5=[12dade34102f4b761ff51c4719274938]
+link PFCFS to Scheduler--><g id="link_PFCFS_Scheduler"><path codeLine="29" d="M81.14,55.04 C86.95,56.86 273,115 273,115 C273,115 279.49,117.63 288.97,121.25 " fill="none" id="PFCFS-to-Scheduler" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="291.49,114.72,307.78,128.27,286.6,127.84,291.49,114.72" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[12dade34102f4b761ff51c4719274938]
+link PFCFS to Scheduler--><g id="link_PFCFS_Scheduler"><path codeLine="30" d="M92.4086,45.6152 C92.4086,45.6152 116,55 116,55 C116,55 252.78,97.74 295.44,111.08 " fill="none" id="PFCFS-Scheduler" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="307.86,114.96,300.4611,108.4595,303.0872,113.4699,298.0769,116.096,307.86,114.96" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="303.0872" x2="295.455" y1="113.4699" y2="111.08"/><polygon fill="#595959" points="81.14,41.49,85.3992,47.3088,92.4086,45.6152,88.1494,39.7964,81.14,41.49" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="88.9823" y="39.6579">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="247.7199" y="107.0298">superior</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="269.7199" y="122.3403">1</text></g><!--MD5=[a20fde296cea08db7317c1e02d94a58c]
+link PPRR to Observable--><g id="link_PPRR_Observable"><path codeLine="31" d="M580.915,60.1549 C580.915,60.1549 497,115 497,115 C497,115 426,172 426,172 C426,172 358.7,203.32 304.64,228.49 " fill="none" id="PPRR-Observable" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="292.63,234.07,302.4774,233.8986,297.163,231.9601,299.1015,226.6457,292.63,234.07" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="297.163" x2="304.42" y1="231.9601" y2="228.585"/><polygon fill="#595959" points="590.96,53.59,583.7492,53.5241,580.915,60.1549,588.1258,60.2208,590.96,53.59" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="574.8575" y="54.4933">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="282.8196" y="241.5779">target</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="297.3196" y="256.8884">1</text></g><!--MD5=[4331c76558f38bdc3eaf87e48aadbb93]
+link PPRR to Scheduler--><g id="link_PPRR_Scheduler"><path codeLine="32" d="M590.74,40.96 C573.49,47.42 557,55 557,55 C557,55 484.25,84.47 426.52,109.2 " fill="none" id="PPRR-to-Scheduler" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="429.16,115.69,408.03,117.19,423.61,102.83,429.16,115.69" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[4331c76558f38bdc3eaf87e48aadbb93]
+link PPRR to Scheduler--><g id="link_PPRR_Scheduler"><path codeLine="33" d="M580.7092,59.544 C580.7092,59.544 475.24,101.79 420.45,122.13 " fill="none" id="PPRR-Scheduler" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="408.04,126.7,417.8675,127.3484,412.7328,124.9745,415.1067,119.8399,408.04,126.7" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="412.7328" x2="420.24" y1="124.9745" y2="122.21"/><polygon fill="#595959" points="591.84,55.06,584.78,53.5917,580.7092,59.544,587.7693,61.0122,591.84,55.06" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="575.026" y="75.359">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="415.8816" y="106.0405">superior</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="437.8816" y="121.3511">1</text></g><!--MD5=[73aaa42e8f102ac065988a98248acf8b]
+link PPRR to Task--><g id="link_PPRR_Task"><path codeLine="34" d="M600.7314,64.9647 C600.7314,64.9647 579.5,95.05 569.95,108.57 " fill="none" id="PPRR-Task" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="562.33,119.37,570.7904,114.328,565.2154,115.2865,564.2569,109.7115,562.33,119.37" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="565.2154" x2="569.825" y1="115.2865" y2="108.745"/><polygon fill="#595959" points="607.65,55.16,600.9224,57.7561,600.7314,64.9647,607.4589,62.3686,607.65,55.16" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="594.6897" y="75.4833">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="499.3397" y="93.4466">RUNNING</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="525.3397" y="108.7572">1</text></g><!--MD5=[f76288fd8a56d823abebceae47915079]
+link Scheduler to Observer--><g id="link_Scheduler_Observer"><path codeLine="35" d="M362.07,172.05 C363.83,183.91 365.93,198.13 367.92,211.62 " fill="none" id="Scheduler-to-Observer" style="stroke:#008200;stroke-width:1.0;"/><polygon fill="none" points="374.9,210.97,370.9,231.78,361.05,213.02,374.9,210.97" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[0252608a830515b03478eb97176fa6e0]
+link T0 to Scheduler--><g id="link_T0_Scheduler"><path codeLine="36" d="M420.72,51.25 C407.93,64.28 392.93,82.05 380.57,98.44 " fill="none" id="T0-to-Scheduler" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="386.2,102.61,368.85,114.78,374.82,94.45,386.2,102.61" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[0252608a830515b03478eb97176fa6e0]
+link T0 to Scheduler--><g id="link_T0_Scheduler"><path codeLine="37" d="M432.0811,65.1161 C432.0811,65.1161 411.79,92.29 400.81,104.9 " fill="none" id="T0-Scheduler" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="392.06,114.67,401.0433,110.6327,395.3951,110.9448,395.083,105.2966,392.06,114.67" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="395.3951" x2="400.73" y1="110.9448" y2="104.985"/><polygon fill="#595959" points="438.78,55.16,432.1118,57.9051,432.0811,65.1161,438.7492,62.371,438.78,55.16" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="428.0451" y="75.4833">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="403.5089" y="88.9786">superior</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="425.5089" y="104.2891">1</text></g><!--MD5=[2ac467e4df138f467badfb984ec88545]
+link T3 to Scheduler--><g id="link_T3_Scheduler"><path codeLine="38" d="M505.84,48.07 C482.97,62.68 448.3,84.82 418.29,103.99 " fill="none" id="T3-to-Scheduler" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="421.9,109.99,401.28,114.86,414.36,98.19,421.9,109.99" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[88e690e2a87e8fbc9e102c5158739213]
+link Task to Observable--><g id="link_Task_Observable"><path codeLine="39" d="M502.8682,164.6197 C502.8682,164.6197 487,172 487,172 C487,172 310,232 310,232 C310,232 308.04,232.75 304.76,234 " fill="none" id="Task-Observable" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="292.57,238.66,302.405,239.182,297.2403,236.8743,299.5479,231.7096,292.57,238.66" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="297.2403" x2="304.715" y1="236.8743" y2="234.02"/><polygon fill="#595959" points="513.74,159.54,506.6109,158.4559,502.8682,164.6197,509.9973,165.7038,513.74,159.54" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="497.8081" y="159.0105">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="270.4489" y="206.2381">target</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="284.9489" y="221.5487">1</text></g><!--MD5=[2034717a1b1538828294e451113544cf]
+link Task to Observer--><g id="link_Task_Observer"><path codeLine="40" d="M513.84,166.13 C491.03,181.47 459.79,202.47 432.73,220.68 " fill="none" id="Task-to-Observer" style="stroke:#008200;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="436.6,226.51,416.1,231.86,428.79,214.89,436.6,226.51" style="stroke:#008200;stroke-width:1.0;"/></g><!--MD5=[f4480fde34404bc784556a9de0e60a06]
+link Task to State--><g id="link_Task_State"><path codeLine="41" d="M546,179.77 C546,179.77 546,206.22 546,218.52 " fill="none" id="Task-State" style="stroke:#595959;stroke-width:1.0;"/><polygon fill="#595959" points="546,231.8,550,222.8,546,226.8,542,222.8,546,231.8" style="stroke:#595959;stroke-width:1.0;"/><line style="stroke:#595959;stroke-width:1.0;" x1="546" x2="546" y1="226.8" y2="218.8"/><polygon fill="#595959" points="546,167.77,542,173.77,546,179.77,550,173.77,546,167.77" style="stroke:#595959;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="537.025" y="188.1201">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="31" x="511.9484" y="205.8634">state</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="523.4484" y="221.1739">1</text></g><!--MD5=[3037b75f5af80b93f171902f5074a5f0]
+@startuml
+
+!theme vibrant
+top to bottom direction
+skinparam linetype polyline
+
+class Clock
+class JFCFS
+class JHRRN
+class JSJF
+interface Observable << interface >>
+interface Observer << interface >>
+class PFCFS
+class PPRR
+interface Scheduler << interface >>
+enum State << enumeration >>
+class T0
+class T3
+class Task
+
+Clock       -[#008200,dashed]-^  Observable 
+Clock      "1" *-[#595959,plain]-> "observers\n*" Observer   
+JFCFS       -[#008200,dashed]-^  Scheduler  
+JFCFS      "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+JHRRN       -[#008200,dashed]-^  Scheduler  
+JHRRN      "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+JSJF        -[#008200,dashed]-^  Scheduler  
+JSJF       "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+PFCFS      "1" *-[#595959,plain]-> "target\n1" Observable 
+PFCFS       -[#008200,dashed]-^  Scheduler  
+PFCFS      "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+PPRR       "1" *-[#595959,plain]-> "target\n1" Observable 
+PPRR        -[#008200,dashed]-^  Scheduler  
+PPRR       "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+PPRR       "1" *-[#595959,plain]-> "RUNNING\n1" Task       
+Scheduler   -[#008200,plain]-^  Observer   
+T0          -[#008200,dashed]-^  Scheduler  
+T0         "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+T3          -[#008200,dashed]-^  Scheduler  
+Task       "1" *-[#595959,plain]-> "target\n1" Observable 
+Task        -[#008200,dashed]-^  Observer   
+Task       "1" *-[#595959,plain]-> "state\n1" State      
+@enduml
+
+@startuml
+
+skinparam BackgroundColor FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 7
+skinparam ArrowColor 454645
+skinparam FontColor 454645
+skinparam SequenceLifeLineBorderColor 696969
+skinparam SequenceGroupHeaderFontColor 454645
+skinparam SequenceGroupFontColor 696969
+skinparam SequenceGroupBorderColor 696969
+skinparam SequenceGroupBorderThickness 1
+
+skinparam sequenceDivider {
+    BorderColor 454645
+    BorderThickness 1
+    FontColor 454645
+}
+
+skinparam participant {
+    BackgroundColor FF6347
+    BorderColor 454645
+    FontColor FFFFFF
+    BorderThickness 1.5
+}
+
+skinparam database {
+    BackgroundColor 00FFFF
+    BorderColor 454645
+    FontColor 454645
+}
+
+skinparam entity {
+    BackgroundColor FFE552
+    BorderColor 454645
+    FontColor 454645
+}
+
+skinparam note {
+    BackgroundColor 7FFFD4
+    BorderColor 454645
+    FontColor 454645
+    BorderThickness 1.5
+}
+
+skinparam actor {
+    BackgroundColor 454645
+    BorderColor 454645
+    FontColor 454645
+}
+
+skinparam boundary {
+    BackgroundColor FFE552
+    BorderColor 454645
+    FontColor 454645
+}
+
+skinparam control {
+    BackgroundColor FFE552
+    BorderColor 454645
+    FontColor 454645
+}
+
+skinparam collections {
+    BackgroundColor FF5F42
+    BorderColor 454645
+    FontColor 454645
+}
+
+skinparam queue {
+    BackgroundColor FF6347
+    BorderColor 454645
+    FontColor FFF
+    BorderThickness 1.5
+}
+top to bottom direction
+skinparam linetype polyline
+
+class Clock
+class JFCFS
+class JHRRN
+class JSJF
+interface Observable << interface >>
+interface Observer << interface >>
+class PFCFS
+class PPRR
+interface Scheduler << interface >>
+enum State << enumeration >>
+class T0
+class T3
+class Task
+
+Clock       -[#008200,dashed]-^  Observable 
+Clock      "1" *-[#595959,plain]-> "observers\n*" Observer   
+JFCFS       -[#008200,dashed]-^  Scheduler  
+JFCFS      "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+JHRRN       -[#008200,dashed]-^  Scheduler  
+JHRRN      "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+JSJF        -[#008200,dashed]-^  Scheduler  
+JSJF       "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+PFCFS      "1" *-[#595959,plain]-> "target\n1" Observable 
+PFCFS       -[#008200,dashed]-^  Scheduler  
+PFCFS      "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+PPRR       "1" *-[#595959,plain]-> "target\n1" Observable 
+PPRR        -[#008200,dashed]-^  Scheduler  
+PPRR       "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+PPRR       "1" *-[#595959,plain]-> "RUNNING\n1" Task       
+Scheduler   -[#008200,plain]-^  Observer   
+T0          -[#008200,dashed]-^  Scheduler  
+T0         "1" *-[#595959,plain]-> "superior\n1" Scheduler  
+T3          -[#008200,dashed]-^  Scheduler  
+Task       "1" *-[#595959,plain]-> "target\n1" Observable 
+Task        -[#008200,dashed]-^  Observer   
+Task       "1" *-[#595959,plain]-> "state\n1" State      
+@enduml
+
+PlantUML version 1.2022.7(Tue Aug 23 01:01:30 CST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: CN
+--></g></svg>

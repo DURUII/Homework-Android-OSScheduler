@@ -20,4 +20,4 @@
 4. 机器整合时钟、任务、调度，并接受测试样例或用户输入，输出日志。不同的调度策略在各层级上排列组合，可以衍生出多种具体“机器”。为将对象创建和对象使用解耦，可以使用工厂方法模式。
 
 # 报告提交
-https://github.com/DURUII/Homework-Android-OSScheduler/blob/main/DURUII/main.pdf
+https://github.com/DURUII/Homework-Android-OSScheduler/blob/main/DURUII/

@@ -1,4 +1,4 @@
-\documentclass[UTF8]{ctexart}
+\documentclass[12pt, a4paper, UTF8]{ctexart}
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage[final]{pdfpages}
@@ -20,7 +20,7 @@
 }
 \usepackage{subfigure}
 
-\title{基于Android/Java处理机调度算法模拟实现}
+\title{基于Android多道作业批处理调度模拟实现}
 \author{软件工程2003杜睿}
 \date{}
 
@@ -29,19 +29,20 @@
 \maketitle
 
 \section{设计目的}
-CPU是计算机系统的重要资源，处理机调度是操作系统的核心内容。进程调度和作业调度作为处理机调度的重要组成部分，其调度算法优劣直接影响操作系统的性能好坏。模拟设计进程调度和作业调度算法，在掌握各种调度算法的同时，可以进一步加深理解处理机管理技术的原理及特点。
+软件体系结构课程设计是在学生系统地学习了《软件设计与体系结构》课程后，按照软件设计模式的基本原理，综合运用所学的知识，设计开发一个应用场景，至少使用三种设计模式解决实际问题。通过对一个实际问题的分析、设计与实现，将原理与应用相结合，使学生学会如何把书本上学到的知识用于解决实际问题，培养学生的动手能力；另一方面，使学生能深入理解和灵活掌握教学内容。
 
 \section{系统设计}
 
-\subsection{设计任务\footnote{基于《2020级操作系统课程设计任务书》，2023年1月，有删节}}
+\subsection{设计内容}
+
+模拟实现一个单（多）道批处理系统及其多级调度策略，输入作业序列（提交时间、服务时间、优先级[可选]），输出作业进入内存时间、结束时间、平均周转时间，展示各作业的执行时间线，并对多种调度算法进行性能比较。
 
 \begin{enumerate}
-    \item 可任意选择作业（进程）数量、作业（进程）优先级、作业提交时间（进程到达时间）和预计运行时间。
     \item 模拟实现作业调度中先来先服务（FCFS）、短作业优先（SJF）和最高响应比调度（HRRN）算法。每次作业调度时，显示各作业的执行情况（开始执行时间，结束时间，周转时间）；最后，计算并列出平均周转时间并对相同情况下不同调度算法进行性能分析比较。
     \item 模拟实现进程调度中基于优先级的时间片轮转调度算法（PRR）和多级反馈队列轮转调度算法（MFQ）。每次进行进程切换时，显示各进程执行情况（剩余时间，进程状态，进程排队情况），最后列出各进程的开始执行时间和结束时间。
 \end{enumerate}
 
-\subsection{任务分析}
+\subsection{需求分析}
 
 一个作业从用户提交开始到占有处理机被执行，一般来要由系统三级调度才能实现，即作业调度、内存调度、进程调度。其中最为重要的：
 \begin{description}
@@ -74,34 +75,12 @@ CPU是计算机系统的重要资源，处理机调度是操作系统的核心�
     \end{threeparttable}
     \qquad
 \end{table}
-
-基于设计内容要求及上述理论常识，可以做出如下基本假设：
+基于上述理论常识，可以做出如下基本假设：
 \begin{enumerate}
     \item 作业调度和进程调度是互补共存的层级关系。不考虑内存调度的前提下，实现任何算法，至少要实现两级调度：作业调度及进程调度。
     \item 作业和进程可以合二为一，统一抽象为任务\footnote{作业是提交层面的任务，进程是执行层面的任务，作者注}。不考虑阻塞的前提下，一个任务大致可归为未提交态、收容态、就绪态、运行态及销毁态。
     \item 调度是种将何资源分配给何任务的决策行为。从各级调度的交互上说，调度可以分为：本级进行调度、移交上层调度及委托下层调度。
 \end{enumerate}
-
-综上，我对《任务书》要求的系统设计内容进行重述：\emph{通过编程，模拟实现一个单（多）道批处理系统及其多级调度策略，输入作业序列，输出作业进入内存的时间、结束时间、平均周转时间，展示各作业的执行时间线。}
-
-任务书中要求的原任务与多级调度实现的对应关系如下：
-\begin{table}[htbp]
-    \caption{批处理系统的多级调度明细}
-    \centering
-    \begin{tabular}{cccc}
-        \toprule
-        原任务*                    & 作业调度   & 进程调度   & 内存限制 \\
-        \midrule
-        先来先服务                 & *          & 先来先服务 & 1        \\
-        短作业优先                 & *          & 先来先服务 & 1        \\
-        高响应比优先               & *          & 先来先服务 & 1        \\
-        \midrule
-        基于动态优先级的时间片轮转 & 先来先服务 & *          & INF      \\
-        多级反馈队列               & 先来先服务 & *          & INF      \\
-        \bottomrule
-    \end{tabular}
-    \qquad
-\end{table}
 
 \subsection{概要设计} \label{v0}
 
@@ -109,7 +88,9 @@ CPU是计算机系统的重要资源，处理机调度是操作系统的核心�
 
 \begin{description}
     \item[时钟] 标定时间流逝的基准，以便执行作业调度、进程调度、性能分析等。每流逝一个单位时间，系统至少要进行一次调度。所以，可以建立“时钟”与“调度器”之间的依赖关系，当时钟发生改变时应该自动通知调度器，调度器接受信息并做出响应。时钟，被称为观察目标；调度器，被称为观察者。一个观察目标可以对应对个观察者，可以根据需要增加和删除观察者。这种设计模式被称为\emph{观察者模式}或\emph{发布-订阅模式}。
-    \item[任务] 每个任务都有提交时间、到达时间等属性；运行中任务的剩余时间随时间流逝而减少（从这种意义说，运行中的进程应当观察时间流逝，并自主改变剩余时间字段）。
+    \item[任务] 每个任务都有提交时间、到达时间等属性；运行中任务的剩余时间随时间流逝而减少
+
+        从这种意义说，运行中进程应当观察时间流逝，并自主改变剩余时间字段。换言之，理论上说，任务应当与调度类共同作为时钟的\emph{观察者}。
 
         任务揉杂作业和进程，集成两者的属性，
         即id、优先级、状态、时钟，提交时间、预计需要时间，到达时间、开始时间、剩余时间、完成时间。
@@ -117,9 +98,11 @@ CPU是计算机系统的重要资源，处理机调度是操作系统的核心�
         在模拟逻辑上，状态包含五种类型：未提交、收容、就绪、运行、结束。未提交，代表用户输入作业序列中的提交时间晚于当前时钟时刻；收容，代表作业已提交，进入外存收容队列（外存一般没有容量限制）；就绪，代表进程已创建，进入内存就绪队列（内存一般有容量限制）；运行，代表进程获得处理机资源，随时间流逝剩余时间递减。
     \item[调度] 任务状态由调度器进行切换；调度是分层级的。
 
-        作业提交与调度细节应当是解耦的，同时为较好地实现“分级”调度，可以将调度器链式组织，各司其职，又保证了作业在各级调度中的传递，直到进程销毁并记录日志。这种思想来源于\emph{职责链模式}。
+        作业提交与调度细节应当是解耦的，同时为较好地实现“分级”调度，可以将调度器链式组织，各司其职，又保证了作业在各级调度中的传递，直至进程销毁并记录日志。这种思想来源于\emph{职责链模式}。
 
-    \item[机器] 整合时钟、任务、调度，并接受测试样例或用户输入，输出日志。不同的调度策略在各层级上排列组合，可以衍生出多种具体“机器”。为将对象创建和对象使用解耦，可以使用\emph{工厂方法模式}。
+    \item[机器] 整合时钟、任务、调度，并接受测试样例，提供日志。不同策略在各层级上排列，可以衍生成为多种具体“机器”，例如，以先来先服务作为作业调度、以抢占式多级反馈队列作为进程调度，内存无限制的多道批处理机。为将对象创建和对象使用解耦，可以使用\emph{工厂方法模式}。
+
+        对于各算法性能分析而言，各个“处理机”，由于模拟时减少任务的剩余运行时间，应仅仅保有用户提交序列的副本。即通过拷贝一个已经存在的实例来返回新的实例，而不是新建实例。被复制的实例就是我们所称的“原型”，这个原型是可定制的，例如，只拷贝标识符、提交时间、服务时间和优先级。这种设计模式被称为\emph{原型模式}。
 \end{description}
 
 \begin{figure}[htbp]
@@ -180,11 +163,12 @@ CPU是计算机系统的重要资源，处理机调度是操作系统的核心�
     \item [优化通信机制] 扭转各层对时间流逝固定、单向的感知顺序。拟人地说，各层消息传递机制不能只包含“向上告知”，还要包含“向下问责”。进程调度结束后，倘若可以通知作业调度：“你那里还有什么要我签字处理的吗？”；那么，延时问题说不定就可以迎刃而解。
 \end{description}
 
+此外，在上一节的基础上，添加以下前提假设，以便系统实现：时钟的最小颗粒单位为分钟，所有作业均在23:59前提交并结束。
+倘若用户要求输入时间单位不统一，可以尝试添加\emph{适配器}。
+
 \section{系统实现}
 
 \subsection{核心实现}
-在上一节的基础上，添加以下前提假设，以便系统实现：时钟的最小颗粒单位为分钟，所有作业均在23:59前提交并结束。《任务书》设计描述中，单位并不统一，如，“进程到达时间（单位时间）”、“作业提交时间（时钟时刻）”、“预计运行时间（小时）”。所以需要在正式输入核心部分前，需要进行数据预处理和单位标准化。
-
 以“多级队列反馈队列”为例，我们需要实现（类图见下页）：
 \begin{itemize}
     \item 核心组件：
@@ -235,6 +219,423 @@ CPU是计算机系统的重要资源，处理机调度是操作系统的核心�
     \qquad
 \end{table}
 
+\subsubsection{时钟}
+接口：
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=5pt,
+    frame=lines,
+    gobble=4,
+    framesep=2mm]{Java}
+    public interface Observable {
+        void attachObserver(Observer o);
+
+        void detachObserver(Observer o);
+
+        void notifyObservers();
+    }
+\end{minted}
+
+具体实现：
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=5pt,
+    frame=lines,
+    gobble=4,
+    framesep=2mm]{Java}
+    public class Clock implements Observable {
+        public static final int UNIT = 1;
+        // main attribute
+        public static int minutes = -1;
+        // subscribers
+        private final List<Observer> observers = new ArrayList<>();
+
+        // TODO timeline logger
+
+        public String getMilestones() {
+            return null;
+        }
+
+        // increment by one minute
+        public void incrementByUnit() {
+            minutes += UNIT;
+            notifyObservers();
+            Log.e("time-line", this + "");
+            for (Observer o : observers) {
+                Log.e("time-line", o + "");
+            }
+        }
+
+        // helpers
+        public static int parsePatternIntoMinutes(String pattern) {
+            String[] parts = pattern.split(":");
+            return Integer.parseInt(parts[0]) * 60 + Integer.parseInt(parts[1]);
+        }
+
+        public static String generatePatternFromMinutes(int minutes) {
+            return String.format(Locale.CHINA, "%02d:%02d", minutes / 60, minutes % 60);
+        }
+
+
+        // constructors & setters
+        public Clock(int minutes) {
+            Clock.minutes = minutes - 1;
+        }
+
+        public Clock(String pattern) {
+            minutes = parsePatternIntoMinutes(pattern) - 1;
+        }
+
+        // observable implementation
+        @Override
+        public void attachObserver(Observer o) {
+            observers.add(o);
+        }
+
+        @Override
+        public void detachObserver(Observer o) {
+            observers.remove(o);
+        }
+
+        @Override
+        public void notifyObservers() {
+            for (Observer o : observers) {
+                o.update(minutes, UNIT);
+            }
+        }
+
+        // logger
+        @Override
+        public String toString() {
+            return generatePatternFromMinutes(minutes);
+        }
+    }
+
+\end{minted}
+
+\newpage
+\subsubsection{任务}
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=5pt,
+    frame=lines,
+    gobble=4,
+    framesep=2mm]{Java}
+    public class Task implements Cloneable {
+        // auto-increment
+        private static int COUNTER = 0;
+    
+        // universal attribute
+        private final int id;
+        private int priority = 0;
+        private State state = State.NULL;
+    
+        // exclusive for job scheduling
+        private final int jobSubmitTime;
+        private final int estimatedRequireTime;
+    
+        // exclusive for process scheduling
+        private int processLeftTime;
+        private int processArriveTime = -1;
+        private int processStartTime = -1;
+        private int processCompleteTime = -1;
+    
+        public Task(int id, int priority, int jobSubmitTime, int estimatedRequireTime) {
+            this.id = id;
+            this.priority = priority;
+            this.jobSubmitTime = jobSubmitTime;
+            this.estimatedRequireTime = estimatedRequireTime;
+            this.processLeftTime = estimatedRequireTime;
+        }
+    
+        public Task(int priority, int jobSubmitTime, int estimatedRequireTime) {
+            this.id = COUNTER++;
+            this.priority = priority;
+            this.jobSubmitTime = jobSubmitTime;
+            this.estimatedRequireTime = estimatedRequireTime;
+            this.processLeftTime = estimatedRequireTime;
+        }
+    
+        public Task(int jobSubmitTime, int estimatedRequireTime) {
+            this.id = COUNTER++;
+            this.jobSubmitTime = jobSubmitTime;
+            this.estimatedRequireTime = estimatedRequireTime;
+            this.processLeftTime = estimatedRequireTime;
+        }
+    
+        public void decrementLeftTime(int currentTime, int elapseUnit) {
+            if (isRunning()) {
+                this.processLeftTime -= elapseUnit;
+                if (processLeftTime <= 0) {
+                    toggleTerminated(currentTime);
+                }
+            }
+        }
+    
+        public void incrementPriority(int diff) {
+            this.priority += diff;
+        }
+    
+        public void toggleBackup() {
+            this.state = State.BACKUP;
+        }
+    
+        public void toggleReady(int arriveTime) {
+            this.state = State.READY;
+            this.processArriveTime = arriveTime;
+        }
+    
+        public void toggleReReady() {
+            this.state = State.READY;
+        }
+    
+        public void toggleTerminated(int completeTime) {
+            this.state = State.TERMINATED;
+            this.processCompleteTime = completeTime;
+        }
+    
+        public void toggleRunning(int startTime) {
+            this.state = State.RUNNING;
+            if (processStartTime == -1) {
+                this.processStartTime = startTime;
+            }
+        }
+    
+        public boolean isBackup() {
+            return this.state == State.BACKUP;
+        }
+    
+        public boolean isReady() {
+            return this.state == State.READY;
+        }
+    
+        public boolean isRunning() {
+            return this.state == State.RUNNING;
+        }
+    
+        public boolean isTerminated() {
+            return this.state == State.TERMINATED;
+        }
+    
+        public int getId() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return id * factor;
+        }
+    
+        public int getJobSubmitTime() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return jobSubmitTime * factor;
+        }
+    
+        public int getPriority() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return priority * factor;
+        }
+    
+        public int getProcessLeftTime() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return processLeftTime * factor;
+        }
+    
+        public int getProcessArriveTime() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return processArriveTime * factor;
+        }
+    
+        public int getProcessStartTime() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return processStartTime * factor;
+        }
+    
+        public int getProcessCompleteTime() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return processCompleteTime * factor;
+        }
+    
+        public int getEstimatedRequireTime() {
+            return estimatedRequireTime;
+        }
+    
+        public double getResponseRate(int currentTime) {
+            int factor = (isRunning()) ? (-1) : (1);
+            return (1 + ((1.0 * currentTime - jobSubmitTime) 
+            / estimatedRequireTime)) * factor;
+        }
+    
+        public int getRoundTime() {
+            int factor = (isRunning()) ? (-1) : (1);
+            return (processCompleteTime - jobSubmitTime) * factor;
+        }
+    
+        public String toString() {
+            return String.format("{%d,%s,%s}", id, state, 
+                Clock.generatePatternFromMinutes(processLeftTime));
+        }
+    
+        public Object clone() {
+            return new Task(this.id, this.priority, this.jobSubmitTime, 
+                this.estimatedRequireTime);
+        }
+    }    
+\end{minted}
+
+\newpage
+\subsubsection{机器}
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=5pt,
+    frame=lines,
+    gobble=4,
+    framesep=2mm]{Java}
+    public class Machine {
+        private String TAG;
+        private Clock clock;
+        private Scheduler submitImitator;
+        private Scheduler jobScheduler;
+        private Scheduler processScheduler;
+        private Scheduler landfilImitator;
+
+        public void run() {
+            build();
+            while (!(submitImitator.isEmpty() 
+                && jobScheduler.isEmpty() && processScheduler.isEmpty())) {
+                clock.incrementByUnit();
+            }
+
+            ((T3) landfilImitator).getFinalSnapShot();
+        }
+
+        // getters
+        public float getAverageRoundTime() {
+            return ((T3) landfilImitator).getAverageRoundTime();
+        }
+
+        public String getTAG() {
+            return TAG;
+        }
+
+        public String getFinalSnapShot() {
+            return ((T3) landfilImitator).getFinalSnapShot();
+        }
+
+        public Object[] getFinalSnapShotTasks() {
+            return ((T3) landfilImitator).getFinalSnapShotTasks();
+        }
+
+        // setters
+        public Machine setQuantum(int quantum) {
+            if (processScheduler.getClass().equals(PPRR.class)) {
+                ((PPRR) processScheduler).setQuantum(quantum);
+            }
+            return this;
+        }
+
+        public Machine setFactor(int factor) {
+            if (processScheduler.getClass().equals(PMFQ.class)) {
+                ((PMFQ) processScheduler).setFactor(factor);
+            } else if (processScheduler.getClass().equals(PMFQB.class)) {
+                ((PMFQB) processScheduler).setFactor(factor);
+            }
+            return this;
+        }
+
+        public Machine setTrial(List<Task> tasks) {
+            int starter = Integer.MAX_VALUE;
+            for (Task task : tasks) {
+                // FIXME prototype
+                submitImitator.add((Task) task.clone());
+                starter = Math.min(starter, task.getJobSubmitTime());
+            }
+            this.clock = new Clock(starter);
+            return this;
+        }
+
+        public Machine setTAG(String TAG) {
+            this.TAG = TAG;
+            return this;
+        }
+
+        public Machine setClock(Clock clock) {
+            this.clock = clock;
+            return this;
+        }
+
+        public Machine setSubmitImitator(Scheduler submitImitator) {
+            this.submitImitator = submitImitator;
+            return this;
+        }
+
+        public Machine setJobScheduler(Scheduler jobScheduler) {
+            this.jobScheduler = jobScheduler;
+            return this;
+        }
+
+        public Machine setProcessScheduler(Scheduler processScheduler) {
+            this.processScheduler = processScheduler;
+            return this;
+        }
+
+        public Machine setLandfilImitator(Scheduler landfilImitator) {
+            this.landfilImitator = landfilImitator;
+            return this;
+        }
+
+
+
+
+
+        // Observer & Chain of Responsibility
+        private void build() {
+            submitImitator.observe(clock);
+            jobScheduler.observe(clock);
+            processScheduler.observe(clock);
+            landfilImitator.observe(clock);
+            submitImitator.setSuperior(jobScheduler);
+            jobScheduler.setSuperior(processScheduler);
+            processScheduler.setSuperior(landfilImitator);
+            landfilImitator.setInferior(processScheduler);
+            processScheduler.setInferior(jobScheduler);
+            jobScheduler.setInferior(submitImitator);
+        }
+    }
+
+\end{minted}
+
+\newpage
+\subsubsection{机器建造者}
+接口：
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=5pt,
+    frame=lines,
+    gobble=4,
+    framesep=2mm]{Java}
+    public interface MachineBuilder {
+        Machine build();
+    }
+\end{minted}
+
+具体实现，以先来先服务为例：
+\begin{minted}[mathescape,
+    linenos,
+    numbersep=5pt,
+    frame=lines,
+    gobble=4,
+    framesep=2mm]{Java}
+    public class FCFSBuilder implements MachineBuilder {
+    public Machine build() {
+        return new Machine()
+                .setTAG("FCFS")
+                .setClock(new Clock("00:00"))
+                .setSubmitImitator(new T0())
+                .setJobScheduler(new JFCFS())
+                .setProcessScheduler(new PFCFS().setLIMIT(1))
+                .setLandfilImitator(new T3());
+        }
+    }
+\end{minted}
+
+\newpage
 \subsubsection{作业调度}
 实现单道批处理系统，作业调度分别使用“先来先服务算法”、“短作业优先算法”、“高响应比优先算法”，进程调度统一使用“先来先服务算法”。
 
@@ -479,7 +880,7 @@ public void update(int currentTime, int elapseUnit) {
 }
 \end{lstlisting}
 
-多级反馈队列法：设置多级就绪队列，各级队列优先级从高到低，时间片由小到大。新进程到达时，先进入第一级队列，按“先来先服务”原则排队等待。若时间片用完进程仍未结束，则将该进程移入下级队列队尾（直到最后一级）。只有第$k$级队列为空，才会为$k+1$级队头进程分配时间片。
+多级反馈队列法：设置多级就绪队列，各级队列优先级从高到低，时间片由小到大。新进程到达时，先进入第一级队列，按“先来先服务”原则排队等待。若时间片用完进程仍未结束，则将该进程移入下级队列队尾（直至最后一级）。只有第$k$级队列为空，才会为$k+1$级队头进程分配时间片。
 
 \begin{lstlisting}[language={java},caption={多级反馈队列（数据结构）}]
 private List<Deque<Task>> queues = new ArrayList<>();
@@ -581,10 +982,8 @@ public void update(int currentTime, int elapseUnit) {
         }
     }
 
-    // needy for a ready process
     if (leisure) {
         notifyToInferior();
-        // somebody ready
         if (nextBusyIndex() != -1) {
             busyIndex = nextBusyIndex();
             quantum = (int) Math.pow(2, busyIndex);
@@ -613,9 +1012,6 @@ android {
         multiDexEnabled true
         applicationId "edu.wust.durui"
         minSdk 29
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
         ...
     }
     ...
@@ -639,21 +1035,36 @@ dependencies {
 }
 \end{minted}
 
-\subsubsection{核心技术}
+\subsubsection{架构设计}
+谷歌在安卓开发者文档中强调，“应用架构定义了应用的各个部分之间的界限以及每个部分应承担的职责”，推荐按照下列原则设计应用架构：
+\begin{enumerate}
+    \item 关注点分离。基于界面的类（Activity或Fragment）只应该包含界面和交互。这些类应尽可能保持精简，以避免产生与组件生命周期相关的问题，并提高可测试性。毕竟，操作系统可能会根据内存不足等系统条件随时销毁它们，所以，最好避免在Activity或Fragment编写所有代码。
+    \item 数据驱动界面。数据模型应独立于界面或其他组件。持久性模型是理想之选，因为如果 Android 操作系统销毁应用以释放资源，用户也不会丢失数据。
+    \item 单一数据源和单向数据流（Unidirectional Data Flow）。一定条件下，只有唯一的数据所有者（Signle Source Of Truth）可以修改数据。在离线优先应用中，应用数据的单一数据源通常是数据库。
+\end{enumerate}
 
+基于上述架构原则，每个应用应至少有两个层：界面层和数据层。
+\begin{description}
+    \item[界面层] 负责展示数据，更新数据，一般对应Activity或Fragment类。
+    \item[数据层] 包含业务逻辑，包含应用创建、存储和更改数据的规则，向应用的其余部分公开数据，一般对应一个数据类。
+    \item[网域层] 位于界面与数据层之间的可选层，负责封装复杂的业务逻辑，一般该层中的类通常称为用例（UseCase），每个用例都应仅负责单个功能。
+\end{description}
+
+关系到核心架构的两个关键概念是“MVVM”和“MutableLiveData”。
 \begin{description}
     \item[MVVM]
-        应用架构定义了应用的各个部分之间的界限以及每个部分应承担的职责，遵循“关注点分离”、“数据驱动界面”、“单一数据源和单向数据流”，避免在Activity或Fragment编写所有代码。
+        MVVM（Model-View-ViewModel）是一种应用架构，它将应用程序分为三个部分：Model（模型层），View（视图层）和ViewModel（视图模型层）。View仅负责显示数据并接收用户输入，ViewModel仅负责处理业务逻辑并将数据从Model传递到View。
+
+    \item[MutableLiveData]
+        LiveData是生命周期感知型组件，它只会在组件处于激活状态时才会回调相应的方法，从而刷新界面。从软件设计模式的角度说，它原生支持\emph{观察者模式}，能够在数据发生变化时通知观察者（Activity或Fragment等）进行相应的处理。
+\end{description}
+
+\subsubsection{核心技术}
+\begin{description}
     \item[Fragment]
         Fragment组件介于Activity和View：一方面，它未继承Context,无法独立存在，必须作为宿主视图的一部分；可另一方面，它又可以定义管理自己的布局，具有自己的生命周期（Lifecycle）。
-    \item[ViewModel]
-        配置更改（例如旋转屏幕）时，UI数据可能丢失，是因为界面被系统自动销毁重绘（和会输销毁整个程序不同），同时，界面类的成员变量也被回收。一个解决方案是，将数据的所有权和界面交互逻辑分离开；如此，系统只回收Activity类中的对数据类的“引用”，并不会影响数据类本身。
-
-        当ViewModel中存在一个LiveData容器，可以指定当前数据的观察者（Observer），即每当LiveData中存放的数据发生变化时，观察者可以全自动地执行操作，例如，改变UI界面中的数据。相比起定时检测更新和通知模式，观察者具有强大生命力和无比优越性。
-    \item[RecyclerView] 核心视图组件之一。RecyclerView可以轻松高效地显示大量数据，当提供数据并定义每个列表项的外观后，RecyclerView
-        库会根据需要动态创建元素。
-    \item[DatePicker]
-        核心视图组件之一。DatePicker继承自FrameLayout类，日期选择控件的主要功能是向用户提供包含年、月、日的日期数据并允许用户对其修改。如果要捕获用户修改日期选择控件中的数据事件，需要为DatePicker添加OnDateChangedListener监听器。
+    \item[RecyclerView] 核心视图组件之一，用于显示大量数据。
+    \item[DatePicker] 核心视图组件之一。日期选择控件的主要功能是向用户提供包含年、月、日的日期数据并允许用户对其修改。
     \item[EazeGraph]
         核心视图组件之一。轻量级的图表库\footnote{https://github.com/paulroehr/EazeGraph}，支持生成四种图表：条形图，层叠柱状图，饼状图，折线图。
     \item[TimelineView]
@@ -661,34 +1072,18 @@ dependencies {
 
 \end{description}
 
-\subsection{界面设计}
+\subsection{原型设计}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.09]{i-prototype.png}
+    \includegraphics[scale=0.08]{i-prototype.png}
     \caption{界面原型设计图}
 \end{figure}
 
+\newpage
 \section{系统测试}
 
 \subsection{测试用例}
-
-\begin{table}[htbp]
-    \caption{测试用例（先来先服务，平均周转时间1.725h）}
-    \centering
-    \begin{tabular}{cccccc}
-        \toprule
-        作业 & 进入时刻 & 运行时间（分钟） & 开始时刻 & 完成时刻 & 周转时间（分钟） \\
-        \midrule
-        1    & 08:00    & 120              & 08:00    & 10:00    & 120              \\
-        2    & 08:30    & 30               & 10:00    & 10:30    & 120              \\
-        3    & 09:00    & 6                & 10:30    & 10:36    & 96               \\
-        4    & 09:30    & 12               & 10:36    & 10:48    & 78               \\
-        \bottomrule
-    \end{tabular}
-    \qquad
-\end{table}
-
 \begin{table}[htbp]
     \caption{测试用例（短作业优先，平均周转时间1.550h）}
     \centering
@@ -737,25 +1132,7 @@ dependencies {
     \qquad
 \end{table}
 
-\begin{table}[htbp]
-    \caption{测试用例（124非抢占式多级反馈队列）}
-    \centering
-    \begin{tabular}{cccccc}
-        \toprule
-        作业 & 进入时刻 & 服务时间 & 完成时刻 & 周转时间 \\
-        \midrule
-        A    & 0        & 3        & 3        & 3        \\
-        B    & 2        & 6        & 17       & 15       \\
-        C    & 4        & 3        & 18       & 14       \\
-        D    & 6        & 5        & 20       & 14       \\
-        E    & 8        & 2        & 14       & 6        \\
-        \bottomrule
-    \end{tabular}
-    \qquad
-\end{table}
-
 \subsection{运行结果}
-
 见尾页。
 
 \begin{figure}[h]
@@ -792,21 +1169,30 @@ dependencies {
 
 \section{设计总结}
 
-宏观来说，本次课程设计，再一次使我体验了结构化编程、面向对象程序设计的魅力。
-\begin{itemize}
-    \item 自顶向下，逐步求精。例如，本程序模拟处理机，接受用户输入作业序列，输出调度过程及周转时间。处理机的模拟实现可以拆分为对时钟，调度，任务的实现。调度的模拟实现可以分拆为用户提交、作业调度、进程调度、进程销毁。
-    \item 抽象、封装、多态、继承。例如，各级调度虽然各司其职，分工合作，但是又有相类似行为：观察时间流逝、接受任务、移除任务、顺位排序、向上级调度提交任务等。
-          正因此，本系统极大地支持扩展新的调度算法，并通过分级的形式相互排列组合。
-\end{itemize}
+宏观而言，软件设计是针对软件的功能需求、可维护性和可复用性。例如，如果客户要求实现基于“短作业优先”的作业调度和基于“（抢占式）多级反馈队列”的\emph{两道批处理系统}，本系统及其容易扩展。~\\
 
-微观地说，本次课程设计，使我有机会深入了解操作系统处理机调度的种种细节，并有机会尝试移动平台软件设计（基于Java的Android）的最佳实践。
-\begin{itemize}
-    \item 例如，以Activity作为Fragment的宿主，结合ViewModel（LiveData）时，需要注意ViewModelStoreOwner统一，否则无法在切片间共享数据模型。
-    \item 又如，PriorityQueue结合Comparator使用，动态优先级getter/setter的tricks，深拷贝与克隆接口实现。
-    \item 再如，多级反馈队列分为抢占时间片和不抢占时间片两种版本，两种的实现方式类似，唯一的区别在于更新工作队列索引的时机，所谓的“抢占”事实上是每单位时间判断（切换）一次，而所谓的“非抢占”需处理机处于“空闲”状态判断（切换）一次。
-\end{itemize}
+微观而言，以下设计模式我深有体会：
 
-虽然本系统有一定的健壮性，可以抵御一些异常输出，但是依然存在不足，有待改进：
-如不支持输入多级队列的数量（大于三个）及自定义时间片（非指数型增长），由于屏幕限制时间线界面交互设计有待改进。
+\begin{description}
+    \item[观察者模式] 定义了一种一对多的依赖关系，让多个观察者对象同时监听（订阅）某一个主题对象，当主题对象发生变化时，它的所有依赖者（观察者）都会自动收到通知并更新。
+
+        在这种情形下，我们认为观察者是平等的，更新顺序是固定的。在本系统设计中，倘若仅仅使用本模式，将导致延时。
+
+    \item[职责链模式] 使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这些对象连成一条链，并沿该链传递处理请求。
+
+        作业调度是高级调度，负责辅存与内存间的调度；进程调度是低级调度，负责内存与处理器间的调度。两者天然具有职责链关系。
+
+        为了避免“延时”问题，我引入了“双向职责链模式”，即作业调度不止可以向进程调度提交作业，进程调度也可以通知作业调度允许提交作业。
+
+    \item[工厂方法模式] 定义了一个创建对象的抽象方法，由子类决定要实例化的类。工厂方法模式将对象的实例化推迟到子类。
+
+        机器多种多样，如果要进行各算法间的比较，就要创建多种机器。本系统使用工厂方法，实现创建与使用的结耦。
+
+    \item[原型模式] 拷贝这些原型创建新的对象。
+
+        对于各算法性能分析而言，各个“处理机”，由于模拟时减少任务的剩余运行时间，应仅仅保有用户提交序列的副本。即通过拷贝一个已经存在的实例来返回新的实例，而不是新建实例。
+
+\end{description}
+总之，在使用“软件设计模式”时应该活学活用，切忌生搬硬套。最终目的都是让程序低耦合、高复用、高内聚、易扩展、易维护。
 
 \end{document}
